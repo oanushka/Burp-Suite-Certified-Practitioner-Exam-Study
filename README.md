@@ -81,16 +81,6 @@ git-cola --repo 0ad900ad039b4591c0a4f91b00a600e7.web-security-academy.net/
 
 ## DOM-Based XSS  
 
-[DOM XSS Indicators](#identify-dom-xss)  
-[DOM XSS Identified with DOM Invader](#dom-invader)  
-[DOM XSS AngularJS](#vuln-angularjs)  
-[DOM XSS document.write in select](#doc-write-location-search)  
-[DOM XSS JSON.parse web messages](#dom-xss-jsonparse-web-messages)  
-[DOM XSS AddEventListener JavaScript URL](#dom-xss-addeventlistener-javascript-url)  
-[DOM XSS AddEventListener Ads Message](#dom-xss-addeventlistener-ads-message)  
-[DOM XSS Eval Reflected Cookie Stealer](#reflected-dom-xss)  
-[DOM XSS LastviewedProduct Cookie](#dom-xss-lastviewedproduct-cookie)  
-
 ### Identify DOM-XSS  
 
 >DOM-based XSS vulnerabilities arise when JavaScript takes data from an attacker-controllable source, such as the URL, and passes code to a sink that supports dynamic code execution. 
@@ -371,21 +361,6 @@ Once the victim cookie is updated the Exploit server log captures their secret c
 -----
 
 ## Cross Site Scripting  
-
-[XSS Resources](#xss-resources)  
-[Identify allowed Tags](#identify-allowed-tags)  
-[Bypass Blocked Tags](#bypass-blocked-tags)  
-[XSS Assign protocol](#xss-assign-protocol)  
-[Custom Tags not Blocked](#custom-tags-not-blocked)  
-[OnHashChange](#onhashchange)  
-[Reflected String XSS](#reflected-string-xss)  
-[Reflected String Extra Escape](#reflected-string-extra-escape)  
-[AngularJS Sandbox Escape](#angularjs-sandbox-escape)  
-[XSS Template Literal](#xss-template-literal)  
-[XSS via JSON into EVAL](#xss-via-json-into-eval)  
-[Stored XSS](#stored-xss)  
-[Stored DOM XSS](#stored-dom-xss)  
-[XSS in SVG Upload](#xss-svg-upload)  
   
 ### XSS Resources  
 
@@ -944,12 +919,6 @@ alert(document.getElementsByClassName("navbar-brand")[0].innerText)
 
 ## Web Cache Poison  
 
-[Unkeyed header](#unkeyed-header)  
-[Unkeyed Utm_content](#unkeyed-utm_content)  
-[Cloaking utm_content](#cloaking-utm_content)  
-[Poison ambiguous request](#poison-ambiguous-request)  
-[Cache Poison multiple headers](#cache-poison-multiple-headers)  
-
 ### Unkeyed header  
 
 >Target use **tracking.js** JavaScript,  
@@ -1107,11 +1076,6 @@ GET /js/geolocate.js?callback=setCountryCookie&callback=FUZZERFunction; HTTP/2
 
 ## Host Headers  
 
-[Spoof IP Address](#spoof-ip-address)  
-[HOST Connection State](#host-connection-state)  
-[Host Routing based SSRF](#host-routing-based-ssrf)  
-[SSRF via flawed Host request parsing](#absolute-get-url--host-ssrf)  
-
 ### Spoof IP Address  
 
 >***Identify*** that altered HOST headers are supported,  
@@ -1173,14 +1137,6 @@ csrf=TheCSRFTokenValue&username=carlos
 ## HTTP Request Smuggling  
 
 >Architecture with front-end and back-end server, and front-end or back-end does not support chunked encoding **(HEX)** or content-length **(Decimal)**. Bypass security controls to retrieve the victim's request and use the victim user's cookies to access their account.  
-
-[TE.CL dualchunk - Transfer-encoding obfuscated](#tecl-dualchunk---transfer-encoding-obfuscated)    
-[TE.CL multiCase - Admin blocked](#tecl-multiCase---admin-blocked)  
-[CL.TE multiCase - Admin blocked](#clte-multicase---admin-blocked)  
-[CL.TE multiCase - Content-Length Cookie Stealer](#clte-multicase---content-length)  
-[CL.TE multiCase - User-Agent Cookie Stealer](#clte-multicase---user-agent-cookie-stealer)  
-[HTTP/2 smuggling - CRLF injection Cookie Stealer](#http2-smuggling-via-crlf-injection)  
-[HTTP/2 TE - Admin Cookie Stealer](#http2-te-desync-v10a-h2path)  
 
 ### TE.CL dualchunk - Transfer-encoding obfuscated  
 
@@ -1584,17 +1540,6 @@ very-long-strings-so-very-long-string-so-very-long-string-so-very-long-string-so
 # Privilege Escalation  
   
 ## CSRF Account Takeover  
-
-[OAuth](#oauth)  
-[Referer Validation CSRF](#referer-validation-csrf)  
-[Referer Header Present](#referer-header-present)  
-[LastSearchTerm](#lastsearchterm)  
-[CSRF duplicated in cookie](#csrf-duplicated-in-cookie)  
-[CSRF Token Present](#csrf-token-present)  
-[Is Logged In](#is-logged-in)  
-[CSRF No Defences](#csrf-no-defences)  
-[SameSite Strict bypass](#samesite-strict-bypass)  
-[SameSite Lax bypass](#samesite-lax-bypass)  
   
 >Cross-Site Request Forgery vulnerability allows an attacker to force users to perform actions that they did not intend to perform. This can enable attacker to change victim email address and use password reset to take over the account.  
   
@@ -1889,10 +1834,6 @@ https://cms-TARGET.net/login?username=%3Cscript%3Ealert%28%27reflectXSS%27%29%3C
 -----
 
 ## Password Reset  
-
-[Refresh Password broken logic](#refresh-password-broken-logic)  
-[Current Password](#current-password)  
-[Time-Sensitive Password Tokenz](#time-sensitive-password-tokenz)  
   
 ### Refresh Password broken logic  
 
@@ -1939,16 +1880,7 @@ https://cms-TARGET.net/login?username=%3Cscript%3Ealert%28%27reflectXSS%27%29%3C
 ----  
 
 ## SQL Injection  
-  
-[Blind Time Delay](#blind-time-delay)   
-[Blind SQLi](#blind-sqli)  
-[Blind SQLi no indication](#blind-sqli-no-indication)  
-[Blind SQLi Conditional Response](#blind-sqli-conditional-response)  
-[Oracle](#oracle)  
-[SQLMAP](#sqlmap)  
-[Non-Oracle Manual SQLi](#non-oracle-manual-sqli)  
-[Visual error-based SQLi](#visual-error-based-sqli)  
-[HackTheBox CPTS SQLi Fundamentals](https://github.com/botesjuan/cpts-quick-references/blob/main/module/SQL%20Injection%20Fundamentals.md)
+
   
 >Error based or Blind SQL injection vulnerabilities, allow SQL queries in an application to be used to extract data or login credentials from the  database. SQLMAP is used to fast track the exploit and retrieve the sensitive information.  
 
@@ -2237,11 +2169,6 @@ TrackingId=x'||CAST((SELECT password FROM users LIMIT 1) AS int)--;
 
 ## JWT  
 
-[JWT bypass via JWK](#manual-sqli)  
-[JWT Weak secret](#jwt-weak-secret)  
-[JWT kid header](#jwt-kid-header)  
-[JWT arbitrary jku header](#jwt-arbitrary-jku-header)  
-
 
 >JSON web tokens (JWTs) use to send cryptographically signed JSON data, and most commonly used to send information ("claims") about users as part of authentication, session handling, and access control.  
 
@@ -2343,10 +2270,6 @@ hashcat -a 0 -m 16500 <YOUR-JWT> /path/to/jwt.secrets.list
 ## ProtoType Pollution  
 
 >Attacker add arbitrary properties to global JavaScript object prototypes, which is inherited by user-defined objects that lead to client-side DOM XSS or server-side code execution.  
-
-[Client-Side Proto](#client-side-proto)  
-[Server-Side Proto](#server-side-proto)  
-[Dom Invader Enable Prototype Pollution](https://portswigger.net/burp/documentation/desktop/tools/dom-invader/prototype-pollution#enabling-prototype-pollution)  
   
 ### Client-Side Proto  
 
@@ -3375,12 +3298,6 @@ Inject exploit in to read or delete user sensitive data. After injection, trigge
   
 >Corresponding PortSwigger Directory traversal labs.  
 
-1. [PortSwigger Lab: File path traversal, traversal sequences blocked with absolute path bypass](https://portswigger.net/web-security/file-path-traversal/lab-absolute-path-bypass)  
-2. [PortSwigger Lab: File path traversal, traversal sequences stripped non-recursively](https://portswigger.net/web-security/file-path-traversal/lab-sequences-stripped-non-recursively)  
-3. [PortSwigger Lab: File path traversal, traversal sequences stripped with superfluous URL-decode](https://portswigger.net/web-security/file-path-traversal/lab-superfluous-url-decode)  
-4. [PortSwigger Lab: File path traversal, validation of start of path](https://portswigger.net/web-security/file-path-traversal/lab-validate-start-of-path)  
-5. [PortSwigger Lab: File path traversal, validation of file extension with null byte bypass](https://portswigger.net/web-security/file-path-traversal/lab-validate-file-extension-null-byte-bypass)  
-
 ![file-path-traversal-null-byte.png](images/file-path-traversal-null-byte.png)   
 
 >BSCP Exam challenge ***identified***, after obtaining admin session access, you can read `/etc/passwd` and `/etc/hostname` but as soon using same bypass file path traversal technique, the `home/carlos/secret` give response `403 Forbidden`.  
@@ -3689,12 +3606,7 @@ if (request.getParameter("cmd") != null) {
 
 -----
 
-## Deserialization  
-
-[CustomTemplate PHP](#customtemplate-php)  
-[Burp Deserialization Scanner](#burp-deserialization-scanner)  
-[YsoSerial](#ysoserial)  
-[SHA1 HMAC Symfony](#sha1-hmac-symfony)  
+## Deserialization   
   
 ### CustomTemplate PHP  
 
@@ -3984,43 +3896,5 @@ CHAR(83)+CHAR(69)+CHAR(76)+CHAR(69)+CHAR(67)+CHAR(84)
 >Some great links to YouTube content creators training material and links to study stuff.  
 
 - [My YouTube BSCP Study Playlist](https://youtube.com/playlist?list=PLsDxQTEdg_YkVMP6PybE7I-hAdhR7adem)  
-- [Using Burp and Postman, Brad Schiff explain Cookies, Sessions, JSON Web Tokens (JWT) - thanks!](https://youtu.be/uXDnS5PcjCA)  
 
-Youtube Information Security content creators channels (***in no particular order***):  
-
-1. [z3nsh3ll](https://www.youtube.com/@z3nsh3ll/videos)  
-2. [TJCHacking](https://www.youtube.com/@tjchacking/videos)  
-3. [intigriti](https://www.youtube.com/@intigriti/videos)  
-4. [Seven Seas Security](https://www.youtube.com/@7SeasSecurity/videos)  
-5. [Rana Khalil](https://www.youtube.com/@RanaKhalil101/videos)  
-6. [Tib3rius](https://www.youtube.com/@Tib3rius/videos)  
-7. [John Hammond](https://www.youtube.com/@_JohnHammond/videos)  
-8. [TraceTheCode](https://www.youtube.com/@TraceTheCode/videos)  
-9. [The Cyber Mentor](https://www.youtube.com/@TCMSecurityAcademy/videos)  
-10. [Sabyasachi Paul](https://www.youtube.com/@h0tPlug1n/videos)  
-11. [bmdyy](https://www.youtube.com/@bmdyy/videos)  
-12. [CyberSecurityTV](https://www.youtube.com/@CyberSecurityTV/videos)  
-13. [nu11 security](https://www.youtube.com/@Nul1Secur1ty/videos)  
-14. [PortSwigger](https://www.youtube.com/@PortSwiggerTV/videos)  
-15. [IppSec](https://www.youtube.com/@ippsec/videos)  
-16. [Daniel Redfern](https://www.youtube.com/@danielredfern9827/videos)  
-17. [LiveUnderflow](https://www.youtube.com/@LiveUnderflow/videos)  
-18. [JSONSEC](https://www.youtube.com/@JSONSEC/videos)  
-19. [thehackerish](https://www.youtube.com/@thehackerish/videos)  
-20. [David Bombal](https://www.youtube.com/@davidbombal/videos)  
-21. [LearnWebCode Brad Schiff](https://www.youtube.com/@LearnWebCode/videos)  
-  
-## Footnote  
-
->**Perseverance:** is Persistence in doing something despite difficulty or delay in achieving success.  
->The **OSCP** certification taught me to [#TryHarder]() and gave me the foundation penetration testing skills.  
->The **BSCP** exam gave me the next level of web application security analyst knowledge.  
->I hope my notes offer other Information Security Students some guidance and walkthrough tips.  
-  
-## Burp Exam Results  
-
->The Burp Suite Certified Practitioner exam is a challenging practical examination designed to demonstrate your web security testing knowledge and Burp Suite Professional skills.  
->My tip when preparing, is to understand the academy labs. Extra work is required as the labs do not always provide the identification of the vulnerability step.  
->In my study notes I document the lab guides from the official PortSwigger academy to make sure I know how to identify the vulnerability, use it in different scenarios and make payloads that show the impact when exploiting the vulnerability. As example crafting a XSS [cookie stealer payload](https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study/blob/5cbfeb2a11577ad62a31f72635a000bf5dcce293/payloads/CookieStealer-Payloads.md) instead of just calling the `print` function.  
->The BSCP qualification on my resume demonstrate a deep knowledge of the latest vulnerability classes and how to exploit Web Applications, proving my hacking ability to employers and the community.  
-  
+>In my study notes I document the lab guides from the official PortSwigger academy to make sure I know how to identify the vulnerability, use it in different scenarios and make payloads that show the impact when exploiting the vulnerability. As example crafting a XSS [cookie stealer payload](https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study/blob/5cbfeb2a11577ad62a31f72635a000bf5dcce293/payloads/CookieStealer-Payloads.md) instead of just calling the `print` function.   
